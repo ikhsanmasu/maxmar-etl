@@ -1,7 +1,11 @@
-How to setup
-1. setup airbyte and make the ET
-2. setup dbt
-3. setting dbt cron job / scheduler
+# Setup Summary
+1. run dbt destination untuk simulasi destination postgres
+  docker compose up -d
+2. setup airbyte and make the Extract Transform setting
+  abctl local install
+3. setup and run dbt
+  docker compose run --rm dbt run
+4. setting dbt cron job / scheduler
 
 
 AIRBYTE NOTES
