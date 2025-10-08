@@ -1,0 +1,16 @@
+maxmar_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('DB_HOST', 'host.docker.internal') }}"
+      port: "{{ env_var('DB_PORT', '5432') | int }}"
+      user: "{{ env_var('DB_USER', 'postgres') }}"
+      password: "{{ env_var('DB_PASSWORD', 'postgres') }}"
+      dbname: "{{ env_var('DB_NAME', 'analytics') }}"
+      schema: "{{ env_var('DB_SCHEMA', 'analytics') }}"
+      threads: "{{ env_var('DBT_THREADS', '4') | int }}"
+      keepalives_idle: 0
+      connect_timeout: 30
+      retries: 1
+

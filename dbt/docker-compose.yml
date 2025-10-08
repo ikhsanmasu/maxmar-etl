@@ -1,0 +1,26 @@
+services:
+  dbt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        DBT_VERSION: 1.9.0
+    container_name: dbt-maxmar-analytics
+    working_dir: /usr/app
+    volumes:
+      - ./:/usr/app
+      # Uncomment to override profiles.yml with a local one
+      # - ./profiles/profiles.yml:/root/.dbt/profiles.yml:ro
+    environment:
+      # Point to Postgres started via ../db-destination/docker-compose.yml
+      DBT_PROFILES_DIR: /usr/app/profiles
+      DB_HOST: ${DB_HOST:-host.docker.internal}
+      DB_PORT: ${DB_PORT:-5435}
+      DB_NAME: ${DB_NAME:-analytics}
+      DB_USER: ${DB_USER:-postgres}
+      DB_PASSWORD: ${DB_PASSWORD:-postgres}
+      DBT_SCHEMA: ${DBT_SCHEMA:-public}
+      DBT_THREADS: ${DBT_THREADS:-4}
+    # Keep container running for interactive dbt commands
+    command: ["tail", "-f", "/dev/null"]
+

@@ -1,0 +1,29 @@
+[0m15:25:03.580125 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026274440CB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026274C37680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026274C9CA40>]}
+
+
+============================== 15:25:03.583652 | 7c287831-1db9-4d88-8cb0-dd1fc5e279e3 ==============================
+[0m15:25:03.583652 [info ] [MainThread]: Running with dbt=1.10.13
+[0m15:25:03.583652 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'use_colors': 'True', 'invocation_command': 'dbt init maxmar_analytics', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'log_path': 'logs', 'indirect_selection': 'eager', 'profiles_dir': 'C:\\Users\\anggu\\.dbt', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m15:25:03.597036 [debug] [MainThread]: Starter project path: C:\Users\anggu\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\include\starter_project
+[0m15:25:03.608191 [info ] [MainThread]: 
+Your new dbt project "maxmar_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:25:03.608617 [info ] [MainThread]: Setting up your profile.
+[0m15:26:08.239390 [info ] [MainThread]: Profile maxmar_analytics written to C:\Users\anggu\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m15:26:08.239939 [debug] [MainThread]: Command `dbt init` succeeded at 15:26:08.239939 after 64.76 seconds
+[0m15:26:08.239939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000262752DE9F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026275629DF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026274C9CA40>]}
+[0m15:26:08.240947 [debug] [MainThread]: Flushing usage events
+[0m15:26:09.535075 [debug] [MainThread]: An error was encountered while trying to flush usage events

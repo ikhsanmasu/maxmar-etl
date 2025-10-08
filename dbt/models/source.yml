@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: public
+    tables:
+      - name: ponds
+        description: "Tabel sumber kolam"
+        columns:
+          - name: size
+            description: "Ukuran kolam (angka)"
+            tests: [not_null]

@@ -1,0 +1,10 @@
+# Ignore build caches and local artifacts
+target/
+dbt_packages/
+dbt_internal_packages/
+logs/
+.git/
+.venv/
+__pycache__/
+*.pyc
+
